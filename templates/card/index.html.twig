@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les cartes{% endblock %}
+
+{% block body %}
+    {{ form_start(formCard, {'action' : path(app.request.attributes.get('_route')), 'method':'POST', 'enctype':'multiple/form-data'}) }}
+    {{ form_widget(formCard) }}
+    {{ form_end(formCard) }}
+{% endblock %}

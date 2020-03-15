@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Les factions{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'action' : path(app.request.attributes.get('_route')), 'method':'POST', 'enctype':'multiple'}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+{% endblock %}

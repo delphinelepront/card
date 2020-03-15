@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}faction index{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for faction in factions %}
+            <tr>
+                <td>{{ faction.id }}</td>
+                <td>{{ faction.name }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
